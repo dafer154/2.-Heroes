@@ -1,5 +1,7 @@
 # SPA
 
+Second Udemy tutorial course, this project is about Heroes of Marvel and using diferents characteristics of Agular how directives, components, pips, and redirection of Urls
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.0.
 
 ## Development server

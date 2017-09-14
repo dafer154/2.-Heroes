@@ -9,6 +9,8 @@ export class HeroesComponent implements OnInit {
 
   heroes:Heroe[]=[]; //Variable para los heroes
 
+//_heroesService variable del component
+
   constructor(private _heroesService:HeroesService) { }
 
   ngOnInit() {

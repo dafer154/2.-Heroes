@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
+
+//Tipo HeroesService
+
 export class HeroesService {
 
   private heroes:Heroe[]=[
@@ -60,6 +63,8 @@ export class HeroesService {
     console.log("Servicio listo para usar");
 
   }
+
+//Metodo para obtener los heroes
 
   getHeroes(){
     return this.heroes;

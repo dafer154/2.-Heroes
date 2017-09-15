@@ -69,6 +69,12 @@ export class HeroesService {
   getHeroes(){
     return this.heroes;
   }
+
+//Obtener Id
+  getHeroe(idx:string){
+    return this.heroes[idx];
+  }
+
 }
 
 //Campos obligatorios

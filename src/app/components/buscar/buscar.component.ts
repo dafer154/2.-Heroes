@@ -13,7 +13,7 @@ export class BuscarComponent implements OnInit {
   termino:string;
 
 //_heroesService variable del component
-  constructor(private _buscarService:HeroesService,
+  constructor(private _heroesService:HeroesService,
               private activatedRoute: ActivatedRoute,
               ) { }
 
@@ -22,10 +22,11 @@ export class BuscarComponent implements OnInit {
     //this.heroes=this._buscarService.buscarHeroes();
     this.activatedRoute.params.subscribe(params =>{
 
+        console.log(params['termino']);
 
         this.termino = (params['termino']);
         //console.log(params['id']);
-        this.heroes = this._buscarService.buscarHeroes(params['termino']);
+        this.heroes = this._heroesService.buscarHeroes(params['termino']);
         console.log(this.heroes);
     })
 

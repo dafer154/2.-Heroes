@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HeroesService, Heroe} from '../../servicios/heroes.service';
+//Captura el parametro de la Url
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -8,7 +9,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class BuscarComponent implements OnInit {
 
-  heroes:Heroe[]=[]; //Variable para los heroes
+  heroes:any[]=[]; //Variable para los heroes
+  termino:string;
 
 //_heroesService variable del component
   constructor(private _buscarService:HeroesService,
@@ -19,6 +21,9 @@ export class BuscarComponent implements OnInit {
 
     //this.heroes=this._buscarService.buscarHeroes();
     this.activatedRoute.params.subscribe(params =>{
+
+
+        this.termino = (params['termino']);
         //console.log(params['id']);
         this.heroes = this._buscarService.buscarHeroes(params['termino']);
         console.log(this.heroes);
